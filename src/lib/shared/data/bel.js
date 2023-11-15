@@ -1,27 +1,44 @@
 const data = {
+	goQuizBtn: 'Перейти к квесту',
+	showAnswersBtn: 'Показать ответы',
+	nextStepBtn: 'Следующий шаг',
+	endQuizBtn: 'Завершить квиз',
+
 	features: [
 		{
-			title: 'Lorem ipsum is placeholder 1',
-			id: 0,
-			desc: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'
+			title: 'Фатаграфіі і гістарычныя звесткі',
+			id: 2,
+			desc: [
+				`Паглыбіцеся ў гісторыю менскага гета з нашым унікальным квизом, якія прадстаўляюць не толькі пытанні, але і падрабязныя адказы з візуальнымі матэрыяламі.`,
+				`Гэта не проста квиз; гэта вывучэнне мінулага з багатым кантэнтам і падрабязнымі аповядамі.`
+			]
 		},
 		{
-			title: 'Lorem ipsum is placeholder 2',
+			title: 'Глабальная даступнасць',
+			id: 0,
+			desc: [
+				`Пагрузіцеся ў гісторыю менскага гета на вашай роднай мове. Наш квиз падае пытанні і адказы на некалькіх мовах, уключаючы рускі, беларускі і ангельскі. `,
+				`Гэта робіць наша вэб-прыкладанне даступным для аўдыторыі з усяго свету, ствараючы адукацыйная прастора, якое злучае людзей розных культур і нацыянальнасцяў.`
+			]
+		},
+		{
+			title: 'Даступны на ўсіх тыпах прылад',
 			id: 1,
 
-			desc: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'
+			desc: [
+				`Прайдзіце квіз на любой прыладзе. Вэб-аплiкацыя распрацавана з улікам інтуітыўнага дызайну, што забяспечвае даступнасць на ўсіх  тыпах прылад, на якім вы яго запускаеце. `,
+				`Планшэт, смартфон ці персанальны кампутар - наша вэб-прыкладанне гарантуе плыўнае і зручнае ўзаемадзеянне на любым з іх.`
+			]
 		},
-		{
-			title: 'Lorem ipsum is placeholder 3',
-			id: 2,
 
-			desc: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'
-		},
 		{
-			title: 'Lorem ipsum is placeholder 4',
+			title: 'Падрабязнае тлумачэнне',
 			id: 3,
 
-			desc: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'
+			desc: [
+				`Нашы пытанні не проста правяраюць вашы веды, а прапануюць унікальны фармат адказаў — дэталёвае, пакрокавае тлумачэнне, быццам вы абмяркоўваеце гісторыю з дасведчаным настаўнікам. `,
+				`Мы падрыхтавалі квіз без выкарыстання сухіх і ўніверсальных выцісканняў з архіўных матэрыялаў.`
+			]
 		}
 	],
 
