@@ -1,8 +1,8 @@
 const data = {
-	goQuizBtn: 'Перейти к квесту',
-	showAnswersBtn: 'Показать ответы',
-	nextStepBtn: 'Следующий шаг',
-	endQuizBtn: 'Завершить квиз',
+	goQuizBtn: 'Перайсці да квэста',
+	showAnswersBtn: 'Паказаць адказы',
+	nextStepBtn: 'Наступны крок',
+	endQuizBtn: 'Закончыць квiз',
 
 	features: [
 		{
@@ -43,7 +43,7 @@ const data = {
 	],
 
 	quiz: {
-		mainTitle: 'Тэст па гісторыі Мінскага гета',
+		mainTitle: 'Квіз па гісторыі Мінскага гета',
 		steps: [
 			{
 				id: 1,

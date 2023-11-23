@@ -1,8 +1,8 @@
 <script>
 	import { Header, Footer, Carousel } from '../lib/widgets';
-	import { be } from '../lib/shared/';
+	import { bel } from '../lib/shared/';
 
-	let lang = be;
+	let lang = bel;
 </script>
 
 <div class="min-h-screen bg-black">

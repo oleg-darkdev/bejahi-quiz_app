@@ -1,7 +1,7 @@
 <script>
-	import { be, answersNumbers } from '../../lib/shared/';
+	import { bel, answersNumbers } from '../../lib/shared/';
 
-	let lang = be;
+	let lang = bel;
 
 	$: step = 1;
 	$: selectedTemp = 0;
