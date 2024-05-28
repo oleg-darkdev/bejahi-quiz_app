@@ -63,25 +63,30 @@
 	<ul class="social flex flex-row justify-center items-center">
 		
 		
-     <li class=''>
+     <li class='mr-10'>
       
 		<a target="_blank"  href="https://darkdev-progect.vercel.app/" >
-			<h2 class="text-black text-start -mb-2 text-2xl">Development by</h2>
-			<img src="/logos/darkdev.svg" class="h-32" alt="" />
+			<h2 class="text-black font-thin text-start -mb-2 text-xl">Development by</h2>
+			<img src="/logos/darkdev.svg" class="h-20" alt="" />
 		</a>
      </li>
-     <li class='ml-4'>
-      <a target="_blank" href="https://www.linkedin.com/in/oleg-darkdev">
-        <img src="https://i.ibb.co/x7P24fL/facebook.png" />		
-      </a>
-			<!-- <a href="#"></a> -->
-		</li>
-		<li>
+     <li class='pt-8 mr-2'>
       
 			<a target="_blank" href="https://github.com/oleg-darkdev">
-        <img src="https://i.ibb.co/x7P24fL/facebook.png" />		
+        <img src="/images/contact/github.svg" class="h-10"/>		
 			</a>		
      </li>
+     <li class='pt-8 mr-2'>
+      <a target="_blank" href="https://www.linkedin.com/in/oleg-darkdev">
+        <img src="/images/contact/linkedin.svg" class="h-10"/>		
+      </a>
+		</li>
+     <li class='pt-8 mr-2'>
+      <a target="_blank" href="mailto:darkdev_brand@riseup.net">
+        <img src="/images/contact/email.svg" class="h-10"/>		
+      </a>
+		</li>
+		
 	</ul>
   <!-- -->
 </section>
@@ -210,7 +215,8 @@
 
 	.social li a {
 		/* display: inline-block;
-		filter: invert(1); */
+		 */
+     filter: invert(1);
 		margin-right: 20px;
 		transform: scale(0.5);
 		transition: 0.5s;
