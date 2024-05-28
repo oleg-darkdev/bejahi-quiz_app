@@ -1,6 +1,18 @@
+
+<svelte:head>
+	<title>Bejahi</title>
+	<!-- <HeadHrefLangs /> -->
+</svelte:head>
+<!-- `
+<h1 class="text-5xl font-extralight">{i('welcome')}</h1>
+<p>{@html i('description')}</p>` -->
+
 <script>
-	import { Header, Footer, Carousel } from '../lib/widgets';
-	import { bel } from '../lib/shared/';
+  	import { i } from '@inlang/sdk-js';
+	// import {HeadHrefLangs} from '$shared';
+
+	import { Header, Footer, Carousel } from '$widgets';
+	import { bel } from '$shared/';
 
 	let lang = bel;
 </script>

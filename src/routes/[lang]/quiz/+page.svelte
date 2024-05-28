@@ -1,5 +1,5 @@
 <script>
-	import { bel, answersNumbers } from '../../lib/shared/';
+	import { bel, answersNumbers } from '$shared/';
 
 	let lang = bel;
 
@@ -105,3 +105,5 @@
 		{/if}
 	</main>
 </div>
+
+
