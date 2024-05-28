@@ -53,8 +53,9 @@
 		"vitest": "^0.28.4"
 	},
 	"type": "module",
-		"dependencies": {
+	"dependencies": {
 		"@fortawesome/fontawesome-free": "^6.5.2",
+		"@inlang/cli": "^2.16.9",
 		"@sveltejs/adapter-vercel": "^2.4.3",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/forms": "^0.5.4",

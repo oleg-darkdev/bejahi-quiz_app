@@ -43,8 +43,7 @@
 	<!-- For example: https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
 	<div class="overlay" />
 	<div class="text">
-		<h2>Historical QUIZ</h2>
-		<!-- <h3>Exploring The World</h3> -->
+		<h2>Гістарычны КВIЗ</h2>
     <Carousel {lang} />
 		<!-- <p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi provident unde illum
