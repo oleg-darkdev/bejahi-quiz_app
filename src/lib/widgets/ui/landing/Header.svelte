@@ -15,7 +15,7 @@
 	];
 </script>
 
-<header class="bg-black">
+<!-- <header class="bg-black">
 	<nav class="bg-black">
 		<div class="container mx-auto flex flex-col items-center p-6">
 			<a href="#" class="mx-auto ">
@@ -31,4 +31,45 @@
 			</div>
 		</div>
 	</nav>
+</header> -->
+
+<header>
+	<h2 class="logo"><img class="h-10 w-auto " src="./images/logo.svg" alt="Logo image" /></h2>
+	<div class="toggle" />
 </header>
+
+<style>
+	.logo {
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	.toggle {
+		position: relative;
+		width: 60px;
+		height: 60px;
+		background: url(https://i.ibb.co/HrfVRcx/menu.png);
+		background-repeat: no-repeat;
+		background-size: 30px;
+		background-position: center;
+		cursor: pointer;
+	}
+
+	header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 40px 100px;
+		z-index: 1000;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	@media (max-width: 800px) {
+		header {
+			padding: 40px;
+		}
+	}
+</style>
