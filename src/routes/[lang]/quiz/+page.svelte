@@ -1,5 +1,7 @@
 <script>
 	import { bel, answersNumbers } from '$shared/';
+	import { Header } from '$widgets';
+	import { Menu } from '$entities';
 
 	let lang = bel;
 
@@ -12,9 +14,15 @@
 		step++;
 		selectedTemp = 0;
 	}
+
+
+  let active = false;
 </script>
 
-<div class="flex h-auto min-h-screen items-center justify-center bg-black">
+<section class="showcase" class:active>
+	<Header bind:active />
+
+
 	<main
 		class="container flex min-h-[32rem] max-w-7xl flex-col space-y-6 px-6 py-4 lg:flex-row lg:items-center lg:py-16"
 	>
@@ -99,11 +107,39 @@
 
 			<div class="flex h-96 w-full flex-col items-center justify-center lg:w-1/2">
 				<p class="text-[120px] font-black">7</p>
-				<!-- 						class="h-full w-full max-w-lg rounded-lg object-cover"
- -->
 			</div>
 		{/if}
 	</main>
-</div>
+</section>
+<Menu />
+
+<style>
+  .showcase {
+		position: fixed;
+		right: 0;
+		width: 100%;
+		min-height: 100vh;
+		padding: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #111;
+		color: #fff;
+		transition: 0.5s;
+		z-index: 2;
+	}
+
+	.showcase.active {
+		right: 300px;
+		z-index: 40;
+	}
 
 
+  @media (max-width: 800px) {
+		.showcase,
+		.showcase header {
+			padding: 40px;
+		}
+ 	}
+
+</style>

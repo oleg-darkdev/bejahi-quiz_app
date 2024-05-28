@@ -7,20 +7,14 @@
 	// import {HeadHrefLangs} from '$shared';
 
 	import { Header, Footer, Carousel } from '$widgets';
+	import { Menu } from '$entities';
 	import { bel } from '$shared/';
 
 	import { onMount } from 'svelte';
 
-	onMount(() => {
-		const menuToggle = document.querySelector('.toggle');
-		const showcase = document.querySelector('.showcase');
-
-		menuToggle.addEventListener('click', () => {
-			menuToggle.classList.toggle('active');
-			showcase.classList.toggle('active');
-		});
-	});
 	let lang = bel;
+
+	let active = false;
 </script>
 
 <svelte:head>
@@ -28,29 +22,21 @@
 	<!-- <HeadHrefLangs /> -->
 </svelte:head>
 
+<section class="showcase" class:active>
+	<Header bind:active />
 
-<section class="showcase ">
-		<Header />
-
-	<video
-		src=""
-		muted
-		loop
-		autoplay
-	/>
-	<!-- Sample Video provided by DesignSupply https://codepen.io/designsupply/pen/zmEWBm -->
-	<!-- Download Video Source and host the file on your own server -->
-	<!-- For example: https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
+  <!-- https://www.youtube.com/watch?v=ZbD8qbcXjgw -->
+	<!-- <video src="/video/bg-video.gif" class='  h-screen' muted loop autoplay /> -->
 	<div class="overlay" />
 	<div class="text">
 		<h2>Гістарычны КВIЗ</h2>
-    <Carousel {lang} />
+		<Carousel {lang} />
 		<!-- <p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi provident unde illum
 			fuga culpa enim eos amet ullam explicabo.
 		</p> -->
-    <div class="mt-20">
-			<a class="btn-c" target="_blank" href="/quiz">{lang.goQuizBtn}</a>
+		<div class="mt-14">
+			<a class="btn-c" target="_blank" href="/en/quiz">{lang.goQuizBtn}</a>
 
 			<!-- <a
 
@@ -59,53 +45,38 @@
 			</a> -->
 		</div>
 	</div>
-	<ul class="social flex flex-row justify-center items-center">
-		
-		
-     <li class='mr-10'>
-      
-		<a target="_blank"  href="https://darkdev-progect.vercel.app/" >
-			<h2 class="text-black font-thin text-start -mb-2 text-xl">Development by</h2>
-			<img src="/logos/darkdev.svg" class="h-20" alt="" />
-		</a>
-     </li>
-     <li class='pt-8 mr-2'>
-      
+	<ul class="social flex flex-row items-center justify-center">
+		<li class="mr-10">
+			<a target="_blank" href="https://darkdev-progect.vercel.app/">
+				<h2 class="-mb-2 text-start text-xl font-thin text-black">Development by</h2>
+				<img src="/logos/darkdev.svg" class="h-20" alt="" />
+			</a>
+		</li>
+		<li class="mr-2 pt-8 transition duration-300 ease-in-out delay-150 transform hover:-translate-y-6">
 			<a target="_blank" href="https://github.com/oleg-darkdev">
-        <img src="/images/contact/github.svg" class="h-10"/>		
-			</a>		
-     </li>
-     <li class='pt-8 mr-2'>
-      <a target="_blank" href="https://www.linkedin.com/in/oleg-darkdev">
-        <img src="/images/contact/linkedin.svg" class="h-10"/>		
-      </a>
+				<img src="/images/contact/github.svg" class="h-10" />
+			</a>
 		</li>
-     <li class='pt-8 mr-2'>
-      <a target="_blank" href="mailto:darkdev_brand@riseup.net">
-        <img src="/images/contact/email.svg" class="h-10"/>		
-      </a>
+		<li class="mr-2 pt-8 transition duration-300 ease-in-out delay-150 transform hover:-translate-y-6">
+			<a target="_blank" href="https://www.linkedin.com/in/oleg-darkdev">
+				<img src="/images/contact/linkedin.svg" class="h-10" />
+			</a>
 		</li>
-		
+		<li class="mr-2 pt-8 transition duration-300 ease-in-out delay-150 transform hover:-translate-y-6">
+			<a target="_blank" href="mailto:darkdev_brand@riseup.net">
+				<img src="/images/contact/email.svg" class="h-10" />
+			</a>
+		</li>
 	</ul>
-  <!-- -->
 </section>
-<div class="menu">
-	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">News</a></li>
-		<li><a href="#">Destination</a></li>
-		<li><a href="#">Blog</a></li>
-		<li><a href="#">Contact</a></li>
-	</ul>
-</div>
+<Menu />
 
 <style>
-
 	:root {
-		--overlay-color: #31385c;
+		--overlay-color: #000;
 	}
 
-  .btn-c {
+	.btn-c {
 		display: inline-block;
 		font-size: 1em;
 		background: #fff;
@@ -123,7 +94,7 @@
 	}
 
 	.showcase {
-		position: absolute;
+		position: fixed;
 		right: 0;
 		width: 100%;
 		min-height: 100vh;
@@ -139,23 +110,14 @@
 
 	.showcase.active {
 		right: 300px;
-	}
-
-
-
-
-	.toggle.active {
-		background: url(https://i.ibb.co/rt3HybH/close.png);
-		background-repeat: no-repeat;
-		background-size: 25px;
-		background-position: center;
-		cursor: pointer;
+		z-index: 40;
 	}
 
 	.showcase video {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
+    /* z-index: 100; */
 		width: 100%;
 		min-height: 100vh;
 		object-fit: cover;
@@ -168,7 +130,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: var(--overlay-color);
+		background: #000;
 		mix-blend-mode: overlay;
 	}
 
@@ -198,7 +160,6 @@
 		max-width: 700px;
 	}
 
-
 	.social {
 		position: absolute;
 		bottom: 20px;
@@ -215,7 +176,7 @@
 	.social li a {
 		/* display: inline-block;
 		 */
-     filter: invert(1);
+		filter: invert(1);
 		margin-right: 20px;
 		transform: scale(0.5);
 		transition: 0.5s;
@@ -225,31 +186,6 @@
 		transform: scale(0.5) translateY(-15px);
 	}
 
-	.menu {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 300px;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.menu ul {
-		position: relative;
-		list-style: none;
-	}
-
-	.menu ul li a {
-		text-decoration: none;
-		font-size: 24px;
-		color: #111;
-	}
-
-	.menu ul li a:hover {
-		color: var(--overlay-color);
-	}
 
 	@media (max-width: 800px) {
 		.showcase,

@@ -13,6 +13,8 @@
 			link: '#'
 		}
 	];
+
+	export let active;
 </script>
 
 <!-- <header class="bg-black">
@@ -34,8 +36,8 @@
 </header> -->
 
 <header>
-	<h2 class="logo"><img class="h-10 w-auto " src="./images/logo.svg" alt="Logo image" /></h2>
-	<div class="toggle" />
+	<a href="/"><h2 class="logo"><img class="h-10 w-auto" src="/images/logo.svg" alt="Logo image" /></h2></a>
+	<div class="toggle" class:active on:click={() => (active = !active)} />
 </header>
 
 <style>
@@ -48,7 +50,7 @@
 		position: relative;
 		width: 60px;
 		height: 60px;
-		background: url(https://i.ibb.co/HrfVRcx/menu.png);
+		background: url(/icons/menu.png);
 		background-repeat: no-repeat;
 		background-size: 30px;
 		background-position: center;
@@ -71,5 +73,13 @@
 		header {
 			padding: 40px;
 		}
+	}
+
+	.toggle.active {
+		background: url(/icons/close.png);
+		background-repeat: no-repeat;
+		background-size: 25px;
+		background-position: center;
+		cursor: pointer;
 	}
 </style>
