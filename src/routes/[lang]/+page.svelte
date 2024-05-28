@@ -60,10 +60,10 @@
 			</a> -->
 		</div>
 	</div>
-	<ul class="social">
+	<ul class="social flex flex-row justify-center items-center">
 		
 		
-     <li class='pl-2 -mx-32'>
+     <li class=''>
       
 		<a target="_blank"  href="https://darkdev-progect.vercel.app/" >
 			<h2 class="text-black text-start -mb-2 text-2xl">Development by</h2>
@@ -209,8 +209,8 @@
 	}
 
 	.social li a {
-		display: inline-block;
-		filter: invert(1);
+		/* display: inline-block;
+		filter: invert(1); */
 		margin-right: 20px;
 		transform: scale(0.5);
 		transition: 0.5s;
