@@ -58,7 +58,7 @@
 				<div class="flex h-96 w-full flex-col items-center justify-center lg:w-1/2">
 					<img
 						class="h-full w-full max-w-lg rounded-lg object-cover"
-						src={content.img ? `./images/quiz/${content.img}` : './images/banner.svg'}
+						src={content.img ? `/images/quiz/${content.img}` : '/images/banner.svg'}
 						alt={content.imgTitle}
 					/>
 					<figcaption class="font-semibold tracking-wide text-gray-400">
