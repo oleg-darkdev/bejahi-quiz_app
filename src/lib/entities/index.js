@@ -1,7 +1,7 @@
-// import from './ui/';
+import Menu from './Menu.svelte';
 
 
 
-// export {
-
-// };
+export {
+Menu
+};
